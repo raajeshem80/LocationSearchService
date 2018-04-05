@@ -1,0 +1,48 @@
+<div class="container">
+
+	<div class="row">
+		<form class="form-horizontal" name="searchForm" novalidate
+			ng-submit="search()">
+			<fieldset>
+				<!-- Form Name -->
+				<legend>
+					<h3 class="text-primary">Search By Location</h3>
+				</legend>
+				<div class="col-md-7 appt-list">
+
+					<div class="col-sm-4 input-group">
+						<input type="text" ng-model="searchPlace" id="value"
+							class="form-control input-xs" googleplace
+							address1=user.addressLine1 address2=user.addressLine2
+							city=user.city state=user.state country=user.country
+							zip=user.postalCode latitude=user.latitude
+							longitude=user.longitude placeholder="Enter address" /> <span
+							class="input-group-btn">
+							<button class="btn btn-xs btn-custom"
+								ng-disabled="searchForm.$invalid">Search</button>
+						</span>
+					</div>
+					<div id="map"></div>
+				</div>
+				<div class="col-md-4 appt-list">
+					<div class="col-sm-4 input-group"></div>
+					
+					<div ng-repeat = "user in users" class="udc-address">
+						<p class="lato-regular">
+							<a href="#!viewUser/{{user.id}}" >{{user.firstName}} {{user.lastName}}</a>
+						</p>
+						<p>
+							<span class="lato-semibold">Address: </span>
+								{{user.address.addressLine1}}, {{user.address.addressLine2}}, 
+								{{user.address.city}}, 
+								{{user.address.state}}, 
+								{{user.address.country}} - {{user.address.postalCode}}<br>
+							<span class="lato-semibold">Contact: </span>{{user.email}}<br>
+							<span class="lato-semibold">Email: </span>{{user.phoneNumber}}<br>
+							<span class="lato-semibold">Near By: </span> 5 km
+						</p>
+					</div>					
+				</div>
+			</fieldset>
+		</form>
+	</div>

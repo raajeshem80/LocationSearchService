@@ -1,0 +1,117 @@
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-12 appt-list">
+
+			<fieldset>
+
+				<!-- Form Name -->
+				<legend>
+					<h3 class="text-primary">Profile Details</h3>
+				</legend>
+				<!-- Admin Content -->
+    <div class="inner-content">
+    	
+          
+        <!-- Content Main Container -->
+        <div class="content-main-container">
+        	
+        	<!-- User Info -->
+        	<div class="content-box profile-user-info">
+        		
+	            <!-- Row -->
+	        	<div class="row">
+	        		
+	        		<!-- User Photo -->
+	        		<div class="col-sm-2">
+	        			<div ><img src="../images/default_profile.jpg" class="user"></div>
+	        		</div>
+	        		<!-- /User Photo -->
+	        		
+	        		<!-- User Details Column -->
+	        		<div class="col-sm-10">
+	        			
+	        			<!-- User Details Container -->
+	        			<div class="user-details-container">
+	        				<h4>{{user.firstName}} {{user.lastName}}</h4>
+	        				<h6>Lives in - {{user.address.city}}</h6>
+	        				<div class="ud-details">
+	        					<p><span class="lato-semibold">Email:</span> {{user.email}}</p>
+	        					<p><span class="lato-semibold">Contact:</span> {{user.phoneNumber}}</p>
+	        					<p><span class="lato-semibold">Created date:</span> 10 / 10 / 2017</p>
+	        				</div>
+	        				<div class="ud-links">
+	        					<span class="udl-l">
+		        					<a href="" ng-click="editProfile()">Edit Profile</a>
+		        					<a href="" ng-click="editPhoto()">Change Photo</a>
+	        					</span>
+	        				</div>
+	        			</div>
+	        			<!-- /User Details Container -->
+	        			
+					</div>
+					<!-- /User Details Column -->					
+	            </div>
+	            <!-- /Row -->
+            
+            </div>
+            <!-- /User Info -->
+        	
+        	<!-- Location & Address -->
+        	<div class="content-box profile-user-store-details">
+        	
+	            <!-- Row -->
+	        	<div class="row">
+	        		
+	        		<!-- User Photo -->
+	        		<div class="col-sm-7">
+	        			<div class="ui-location-map"><div id="map"></div></div>
+	        		</div>
+	        		<!-- /User Photo -->
+	        		
+	        		<!-- User Details Column -->
+	        		<div class="col-sm-5">
+	        			
+	        			<!-- User Details Container -->
+	        			<div class="user-details-container">
+	        				<h3>Address</h3>
+	        				<!-- Address -->
+	        				<div class="udc-address">
+	        					<p class="margin-bottom-15">
+	        					<span class="lato-semibold">Address: </span>
+	        					{{user.address.addressLine1}},
+	        					{{user.address.addressLine2}},<br>
+	        					{{user.address.city}},<br>
+	        					{{user.address.state}},<br>
+	        					{{user.address.postalCode}},<br>
+	        					{{user.address.country}}</p>
+	        					<p>
+	        						<span class="lato-semibold">Contact: </span>{{user.phoneNumber}}<br>
+	        						<span class="lato-semibold">Email: </span>: {{user.email}}
+	        					</p>
+	        					<p class="lato-regular"><a href="" ng-click="editAddress()">Edit</a></p>
+	        				</div>
+	        				<!-- /Address -->
+	        			</div>
+	        			<!-- /User Details Container -->
+	        			
+					</div>
+					<!-- /Location & Address -->
+					
+	            </div>
+	            <!-- /Row -->
+            
+            </div>
+            <!-- /User Info -->
+        
+        </div>
+        <!-- /Content Main Container -->
+        
+        
+        
+    </div>
+			</fieldset>
+		</div>
+	</div>
+</div>
